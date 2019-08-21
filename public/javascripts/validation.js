@@ -1,33 +1,102 @@
-$(document).ready(function () {
+
+//Configuration
+var minUserLen = 5, maxUserLen = 30;
+var minPassLen = 8, maxPassLen = 4096;
+var usernameMsg = "Username must be between " + minUserLen + " and " +
+    maxUserLen + " characters, inclusive.";
+var passwordMsg = "Password must be between " + minPassLen + " and " +
+    maxPassLen + " characters, inclusive.";
+jQuery.validator.setDefaults({
+    debug: true,      //Avoids form submit. Comment when in production.
+    success: "valid",
+    submitHandler: function() {
+        alert("Success! The form was pretend-submitted!");
+    }
+});
+$(document).ready(function() {
+    // validate sign-up form on keyup and submit
     $("#signup-form").validate({
-        rules:{
-            username:{
-                required:true,
-                    minlength:4
+        errorClass: 'errors',
+        rules: {
+            firstname: {
+                required: true,
+                minlength: 4,
+                maxlength: 100
             },
-            password:{
-            required:true,
-            minlength:5
+            lastname: {
+                required: true,
+                minlength: 4,
+                maxlength: 100
             },
-            confirmpassword:{
-            required:true,
-                minlength:5,
-            equalTo:"#password"
-            }
-        },
-        messages: {
-            username: {
-                required: "Enter a user name",
-                minlength: "Enter 4 characters"
-            },
-            password: {
-                required: "Enter password",
-                minlength: "Enter 5 characters"
+            Password: {
+                required: true,
+                minlength: 8,
+                maxlength: maxPassLen
             },
             confirmpassword: {
-                required: "Enter a password",
-                minlength: "Enter 5 characters",
-                equalTo: "password doesn't match"
+                required: true,
+                minlength: 8,
+                equalTo: "#password",
+                maxlength: maxPassLen
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            mobnum: {
+                required: true,
+                minlength: 10,
+                maxlength: 12
+            },
+            games: {
+                required: true
+            },
+            username: {
+                required: true,
+                minlength: 4,
+                maxlength: 100
+            },
+            Select1: {
+                required: true
+            },
+        },
+        messages: {
+            firstname: {
+                required: "Firstname required ",
+                minlength: "atleast 4 character",
+                maxlength: usernameMsg
+            },
+            lastname: {
+                required: "Firstname required",
+                minlength: "Atleast 4 character",
+                maxlength: usernameMsg
+            },
+            Password: {
+                required: "Please provide a password",
+                minlength: "Minimum 8 Character required",
+            },
+            confirmpassword: {
+                required: "Password required",
+                minlength: "Minimum 8 Character required",
+            },
+            mobnum: {
+                required: "Enter the mobile number",
+                minlength: "Minimum 10 Character required",
+                maxlength:"Please check the Number "
+            },
+            Select1: {
+                required: "Please select the county"
+            },
+            games:{
+                required:"Pleas Slect any one of this"
+            },
+            username: {
+                required:"Username Required",
+                minlength: "Minimum 4 Character Required",
             }
-        }})
+        }
     });
+    $('.checkboxsel').click(function() {
+        $(this).siblings('input:checkbox').prop('checked', false);
+    });
+});
