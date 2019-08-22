@@ -41,12 +41,32 @@ $(document).ready(function() {
             },
             email: {
                 required: true,
-                email: true
+                email: true,
+
+                remote: {
+                    url: '/validation/email',
+                    type: 'post',
+                    data: {
+                        email:function() {
+                            return $('#email').val()
+                        }
+                    }
+                },
             },
             mobnum: {
                 required: true,
                 minlength: 10,
-                maxlength: 12
+                maxlength: 12,
+                remote:{
+                    url:'/validation/mobilenumb',
+                    type:'post',
+                    data: {
+                        mobilenumb:function() {
+                            return $('#mob').val()
+                        }
+                    }
+
+                }
             },
             games: {
                 required: true
@@ -79,10 +99,17 @@ $(document).ready(function() {
                 required: "Password required",
                 minlength: "Minimum 8 Character required",
             },
+            email: {
+                required: 'please fill the field',
+                email: 'please ente the valid email',
+                remote: 'Already exist'
+
+            },
             mobnum: {
                 required: "Enter the mobile number",
                 minlength: "Minimum 10 Character required",
-                maxlength:"Please check the Number "
+                maxlength:"Please check the Number ",
+                remote:'try another number'
             },
             Select1: {
                 required: "Please select the county"

@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 router.post('/',function (req,res) {
     let firstname=req.body.firstname;
     let lastname=req.body.lastname;
-    let Gender=req.body._gender;
+    let gender=req.body.gender;
     let country=req.body.Select1;
     let username=req.body.username;
     let email=req.body.email;
@@ -20,19 +20,20 @@ router.post('/',function (req,res) {
 
     console.log(firstname)
 
-    let url='mongodb://localhost:27017'
+    let url='mongodb://localhost:27017/signUpForm'
+
 
     mongoClient.connect(url,function (err,client) {
         if (err){
             console.log('Database connection error'+err)
 
         } else {
-            let myDB=client.db('sample');
+            let myDB=client.db('nodejs');
 
             if(myDB){
                 console.log('connected');
 
-                myDB.collection('signup').insertOne({firstname:firstname,lastname:lastname,username:username,Gender:_gender,country:Select1,email:email,mob:mobnum,password:password,conform_password:confirmpassword},function (err,result) {
+                myDB.collection('signUpForm').insertOne({firstname:firstname,lastname:lastname,username:username,gender:gender,Select1:country,email:email,mobnum:mob,password:password,confirmpassword:conform_password},function (err,result) {
                     if (err) {
                         console.log('error' + err)
                     }else {

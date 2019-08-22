@@ -15,8 +15,8 @@ router.post('/', function(req, res, next) {
               console.log("database error"+error)
         }
         else {
-           let myDB=client.db('mysample');
-            myDB.collection('person').findOne({username:username,password:password},function (err,result) {
+           let myDB=client.db('sample');
+            myDB.collection('sign-up').findOne({username:username,password:password},function (err,result) {
                 if (err) {
                     console.log("error")
                 } else {
