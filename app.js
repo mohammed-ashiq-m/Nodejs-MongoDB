@@ -4,11 +4,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
+let db=require('./dbconfig/db-config')
+
+var indexRouter = require('./routes/login');
 var usersRouter = require('./routes/users');
 let signupRouter = require('./routes/signup');
 let loginRouter=require('./routes/login');
 let validationRouter=require('./routes/validation')
+let feedbackRouter=require('./routes/feedback')
 var app = express();
 
 // view engine setup
@@ -26,7 +29,7 @@ app.use('/users', usersRouter)
 app.use('/signup',signupRouter);
 app.use('/login',loginRouter);
 app.use('/validation',validationRouter);
-
+app.use('/feedback',feedbackRouter)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -41,6 +44,17 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+db.connect(function (error) {
+
+  if (error){
+    console.log('Unable to connect database');
+    process.exit(1);
+  } else {
+    console.log('Sign-up page Database connecetd successfully...');
+  }
+
 });
 
 module.exports = app;
