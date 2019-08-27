@@ -1,58 +1,66 @@
 
-{{#each data}}
+
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!------ Include the above in your HEAD tag ---------->
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body p-0">
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
 
-                        <div class="row p-5">
-                            <div class="col-md-12">
-                                <table class="table">
-                                    <thead>
-                                    <tr>
-                                        <th class="border-0 text-uppercase small font-weight-bold">ID</th>
-                                        <th class="border-0 text-uppercase small font-weight-bold">Firstname</th>
-                                        <th class="border-0 text-uppercase small font-weight-bold">Lastname</th>
-                                        <th class="border-0 text-uppercase small font-weight-bold">Gnder</th>
-                                        <th class="border-0 text-uppercase small font-weight-bold">Country</th>
-                                        <th class="border-0 text-uppercase small font-weight-bold">username</th>
-                                        <th class="border-0 text-uppercase small font-weight-bold">Email</th>
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
 
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>{{_id}}</td>
-                                        <td>{{firstname}}</td>
-                                        <td>{{lastname}}</td>
-                                        <td>{{gender}}</td>
-                                        <td>{{Select1}}</td>
-                                        <td>{{username}}</td>
-                                        <td>{{email}}</td>
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+            .container{
+                margin-top: 50px;
+            }
+        </style>
+    </head>
+    <body>
+    <h5 style="text-align: center">The table only shows the details of customer who are  indians</h5>
+<div class="container">
 
-                                    </tr>
-
-
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-
-
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <table>
+        <tr>
+            <th >ID</th>
+            <th >Firstname</th>
+            <th >Lastname</th>
+            <th >Gnder</th>
+            <th >Country</th>
+            <th >username</th>
+            <th >Email</th>
+        </tr>
+        {{#each data}}
+        <tr>
+            <td>{{_id}}</td>
+            <td>{{firstname}}</td>
+            <td>{{lastname}}</td>
+            <td>{{gender}}</td>
+            <td>{{Select1}}</td>
+            <td>{{username}}</td>
+            <td>{{email}}</td>
+        </tr>
 {{/each}}
-<p type="text" name="firstname"></p>
+    </table>
+</div>
+    </body>
+    </html>
+
+
+
+
+
+
