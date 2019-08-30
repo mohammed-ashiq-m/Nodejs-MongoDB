@@ -12,6 +12,8 @@ let signupRouter = require('./routes/signup');
 let loginRouter=require('./routes/login');
 let validationRouter=require('./routes/validation')
 let feedbackRouter=require('./routes/feedback')
+let updateRouter=require('./routes/update')
+
 var app = express();
 
 // view engine setup
@@ -30,6 +32,8 @@ app.use('/signup',signupRouter);
 app.use('/login',loginRouter);
 app.use('/validation',validationRouter);
 app.use('/feedback',feedbackRouter)
+app.use('/update',updateRouter)
+app.use(express.static('public'))
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

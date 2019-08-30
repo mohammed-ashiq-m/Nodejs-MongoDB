@@ -1,4 +1,4 @@
-
+$ mkdir public$ touch public/main.js
 //Configuration
 var minUserLen = 5, maxUserLen = 30;
 var minPassLen = 8, maxPassLen = 4096;

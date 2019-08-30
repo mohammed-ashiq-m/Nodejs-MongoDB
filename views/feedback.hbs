@@ -1,8 +1,11 @@
 
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="main.js"></script>
     <!------ Include the above in your HEAD tag ---------->
 
     <!DOCTYPE html>
@@ -27,12 +30,23 @@
             .container{
                 margin-top: 50px;
             }
+            .btn {
+                background-color: DodgerBlue;
+                border: none;
+                color: white;
+                padding: 12px 16px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            .btn:hover {
+                background-color: RoyalBlue;
+            }
         </style>
     </head>
     <body>
-    <h5 style="text-align: center">The table only shows the details of customer who are  indians</h5>
+    <h5 style="text-align: center">The table only shows the details of customer who are indians </h5>
 <div class="container">
-
+<form method="get" action="">
     <table>
         <tr>
             <th >ID</th>
@@ -52,9 +66,14 @@
             <td>{{Select1}}</td>
             <td>{{username}}</td>
             <td>{{email}}</td>
+            <td> <button class="btn" id="update" type="submit" ><a href="http://localhost:3000/update" style="color:darkslategrey">Update</a></button>
+
         </tr>
 {{/each}}
     </table>
+</form>
+
+    <f
 </div>
     </body>
     </html>
