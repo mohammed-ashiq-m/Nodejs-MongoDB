@@ -123,7 +123,7 @@ $(document).ready(function() {
             }
         }
     });
-    $('.checkboxsel').click(function() {
-        $(this).siblings('input:checkbox').prop('checked', false);
-    });
-});
+
+
+
+
