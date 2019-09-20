@@ -31,7 +31,7 @@
                 margin-top: 50px;
             }
             .btn {
-                background-color: DodgerBlue;
+                background-color: white;
                 border: none;
                 color: white;
                 padding: 12px 16px;
@@ -46,7 +46,7 @@
     <body>
     <h5 style="text-align: center">The table only shows the details of customer who are indians </h5>
 <div class="container">
-<form method="get" action="">
+
     <table>
         <tr>
             <th >ID</th>
@@ -66,14 +66,18 @@
             <td>{{Select1}}</td>
             <td>{{username}}</td>
             <td>{{email}}</td>
-            <td> <button class="btn" id="update" type="submit" ><a href="http://localhost:3000/update"  data-id="{{_id}}">Edit</a></button>
+            <td>
+                <form action="/update">
+                    <input type="text" name="id" value="{{_id}}" style="display: none">
+                    <input type="submit" value="Edit">
+                </form></button>
 
         </tr>
 {{/each}}
     </table>
-</form>
 
-    <f
+
+
 </div>
     </body>
     </html>
@@ -82,4 +86,4 @@
 
 
 
-
+    <input type="text" name='name0'  class="form-control" value="{{_id}}" style="background-color: inherit">

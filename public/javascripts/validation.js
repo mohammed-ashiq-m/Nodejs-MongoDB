@@ -1,18 +1,4 @@
-$ mkdir public$ touch public/main.js
-//Configuration
-var minUserLen = 5, maxUserLen = 30;
-var minPassLen = 8, maxPassLen = 4096;
-var usernameMsg = "Username must be between " + minUserLen + " and " +
-    maxUserLen + " characters, inclusive.";
-var passwordMsg = "Password must be between " + minPassLen + " and " +
-    maxPassLen + " characters, inclusive.";
-jQuery.validator.setDefaults({
-    debug: true,      //Avoids form submit. Comment when in production.
-    success: "valid",
-    submitHandler: function() {
-        alert("Success! The form was pretend-submitted!");
-    }
-});
+
 $(document).ready(function() {
     // validate sign-up form on keyup and submit
     $("#signup-form").validate({
@@ -31,13 +17,13 @@ $(document).ready(function() {
             Password: {
                 required: true,
                 minlength: 8,
-                maxlength: maxPassLen
+                maxlength: 20
             },
             confirmpassword: {
                 required: true,
                 minlength: 8,
                 equalTo: "#password",
-                maxlength: maxPassLen
+                maxlength: 20
             },
             email: {
                 required: true,
@@ -51,7 +37,7 @@ $(document).ready(function() {
                             return $('#email').val()
                         }
                     }
-                },
+                }
             },
             mobnum: {
                 required: true,
@@ -84,12 +70,12 @@ $(document).ready(function() {
             firstname: {
                 required: "Firstname required ",
                 minlength: "atleast 4 character",
-                maxlength: usernameMsg
+                maxlength: "Max length is 100"
             },
             lastname: {
                 required: "Firstname required",
                 minlength: "Atleast 4 character",
-                maxlength: usernameMsg
+                maxlength: "Max length is 100"
             },
             Password: {
                 required: "Please provide a password",
@@ -123,7 +109,4 @@ $(document).ready(function() {
             }
         }
     });
-
-
-
-
+});

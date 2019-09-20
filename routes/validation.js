@@ -15,14 +15,17 @@ router.post('/email',function (req,res) {
             console.log("database error" + error)
         } else {
             let myDB = client.db('nodejs');
-            myDB.collection('signUpForm').findOne({email:email}, function (err, user) {
+            myDB.collection('signUpForm').findOne({email:email},function (err, user) {
                 if (err) {
                     console.log("error")
                 } else {
-//console.log(user)
+console.log("user:",user)
+
                     if (user) {
                         res.send(false); //this is not returning back to the statement that called the helper function
-                    } else {
+                    }
+
+                    else {
                         res.send(true); //this is not returning back to the statement that called the helper function
                     }
                 }
@@ -51,7 +54,7 @@ router.post('/mobilenumb',function (req,res) {
                 if (err) {
                     console.log("error")
                 } else {
-console.log(user)
+
                     if (user) {
                         res.send(false); //this is not returning back to the statement that called the helper function
                     } else {
