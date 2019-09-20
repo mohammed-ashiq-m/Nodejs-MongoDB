@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9007f89b-c1f5-451f-8a70-61c8850e8635" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/javascripts/validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/validation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/update.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/validation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/feedback.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/feedback.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/output.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/output.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/update.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/update.hbs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,13 +17,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/update.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+            <state relative-caret-position="225">
+              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/feedback.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -46,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/update.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="133" selection-start-line="14" selection-start-column="133" selection-end-line="14" selection-end-column="133" />
+            <state relative-caret-position="345">
+              <caret line="23" column="133" selection-start-line="23" selection-start-column="133" selection-end-line="23" selection-end-column="133" />
             </state>
           </provider>
         </entry>
@@ -58,7 +53,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/feedback.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="180">
               <caret line="62" column="29" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="29" />
             </state>
           </provider>
@@ -310,12 +305,12 @@
       <workItem from="1568013400713" duration="1117000" />
       <workItem from="1568087199607" duration="656000" />
       <workItem from="1568354952416" duration="20000" />
-      <workItem from="1568957218702" duration="8544000" />
+      <workItem from="1568957218702" duration="9050000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106801000" />
+    <option name="totallyTimeSpent" value="107307000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -328,7 +323,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49674267" visible="true" weight="0.22648902" />
       <window_info id="Structure" order="1" sideWeight="0.50325733" side_tool="true" weight="0.25" />
@@ -336,14 +330,14 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32899022" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32899022" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3257329" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3257329" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32899022" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -459,13 +453,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/feedback.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/output.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5010">
@@ -482,22 +469,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/update.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/feedback.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="62" column="29" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="29" />
+        <state relative-caret-position="225">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/update.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="133" selection-start-line="14" selection-start-column="133" selection-end-line="14" selection-end-column="133" />
+        <state relative-caret-position="345">
+          <caret line="23" column="133" selection-start-line="23" selection-start-column="133" selection-end-line="23" selection-end-column="133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/feedback.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="62" column="29" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/feedback.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
