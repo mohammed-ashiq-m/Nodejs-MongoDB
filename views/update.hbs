@@ -5,17 +5,17 @@
             <div class="card-heading"></div>
             <div class="card-body">
                 <h2 class="title">SIGN-UP </h2>
-                <form method="post" id="signup-form" action="/update" >
+                <form method="post" id="update-form" action="/update/updateForm" >
                     <div class="input-group">
 
-                        <input class="input--style-1" type="text" id="id" placeholder="id" name="id" value="{{_id}}">
+                        <input class="input--style-1" type="text" id="id" placeholder="id" name="id" value="{{data._id}}" style="display: none">
 
                     </div>
                     <div class="input-group">
-                        <input class="input--style-1" type="text" id="firstname" placeholder="FIRST NAME" name="firstname">
+                        <input class="input--style-1" type="text" id="firstname" placeholder="FIRST NAME" name="firstname" value="{{data.firstname}}">
                     </div>
                     <div class="input-group">
-                        <input class="input--style-1" type="text" id="lastname" placeholder="LAST NAME" name="lastname" value="{{lastname}}">
+                        <input class="input--style-1" type="text" id="lastname" placeholder="LAST NAME" name="lastname" value="{{data.lastname}}">
                     </div>
                     <div class="row row-space">
 
@@ -23,16 +23,29 @@
                             <div class="input-group ">
                                 <div class="rs-select2 js-select-simple select--no-search col-12">
                                     <div class="form-group row">
-                                        <label class=" col-form-label text-md-right" style="font-size: initial">Gender</label>
-
+                                        <label class=" col-form-label text-md-right" style="font-size: initial" >Gender</label>
+                                        {{#if gen}}
                                         <label class="form-check col-3 col-form-label text-md">
-                                            <input class="form-check-input " type="radio" name="gender" value="Male">
+                                            <input class="form-check-input " type="radio" name="gender" value="Male" checked>
                                             <span class="form-check-label"> Male </span>
                                         </label>
                                         <label class="form-check col-4 col-form-label text-md">
                                             <input class="form-check-input " type="radio" name="gender" value="Female">
                                             <span class="form-check-label"> Female</span>
                                         </label>
+
+                                         {{else}}
+
+                                                <label class="form-check col-3 col-form-label text-md">
+                                                    <input class="form-check-input " type="radio" name="gender" value="Male" >
+                                                    <span class="form-check-label"> Male </span>
+                                                </label>
+                                                <label class="form-check col-4 col-form-label text-md">
+                                                    <input class="form-check-input " type="radio" name="gender" value="Female"checked>
+                                                    <span class="form-check-label"> Female</span>
+                                                </label>
+
+                                            {{/if}}
 
                                     </div>
                                 </div>
@@ -41,8 +54,8 @@
                     </div>
                     <div class="input-group">
                         <div class="rs-select2 js-select-simple select--no-search">
-                            <select class="dropdown form-control"  name="Select1" size="1">
-                                <option value="">SELECT THE COUNTRY</option>
+                            <select class="dropdown form-control"  name="Select1" size="1" >
+                                <option value="{{data.Select1}}">{{data.Select1}}</option>
 
                                 <option value="Afghanistan">Afghanistan</option>
                                 <option value="Åland Islands">Åland Islands</option>
@@ -293,31 +306,31 @@
                         </div>
                     </div>
                     <div class="input-group">
-                        <input class="input--style-1" type="text" id="email" placeholder="E-MAIL" name="email">
+                        <input class="input--style-1" type="text" id="email" placeholder="E-MAIL" name="email" value="{{data.email}}" disabled>
                         <span id="error"></span>
                     </div>
 
                     <div class="row row-space">
                         <div class="col-5">
                             <div class="input-group">
-                                <input class="input--style-1" type="text" id="mob" placeholder="MOBILE NUMBER" name="mobnum">
+                                <input class="input--style-1" type="text" id="mob" placeholder="MOBILE NUMBER" name="mobnum" value="{{data.mobnum}}">
                             </div>
                         </div>
                     </div>
                     <div class="input-group">
-                        <input class="input--style-1" type="text" id="username" placeholder="USER NAME" name="username">
+                        <input class="input--style-1" type="text" id="username" placeholder="USER NAME" name="username" value="{{data.username}}">
                     </div>
                     <div class="row row-space">
                         <div class="col-5">
                             <div class="input-group">
-                                <input class="input--style-1" type="text" id="password" placeholder="PASSWORD" name="Password">
+                                <input class="input--style-1" type="text" id="password" placeholder="PASSWORD" name="Password" value="{{data.password}}">
                             </div>
                         </div>
                     </div>
                     <div class="row row-space">
                         <div class="col-5">
                             <div class="input-group">
-                                <input class="input--style-1" type="text" id="confirm_password" placeholder="CONFIRM PASSWORD" name="confirmpassword">
+                                <input class="input--style-1" type="text" id="confirm_password" placeholder="CONFIRM PASSWORD" name="confirmpassword" >
                             </div>
                         </div>
                     </div>
@@ -328,11 +341,29 @@
                         <div class="col-12">
                             <div class="form-group row">
                                 <label class="col-md-4 col-form-label text-md-right" style="font-size: initial">Select A Game</label>
+
                                 <div class="col-md-12">
-                                    Pubg<input type="checkbox" id="games1" class="checkboxsel" name="games" value="Pubg">
-                                    Call Of Duty<input type="checkbox" id="games2" class="checkboxsel"  name="games" value="Call Of Duty">
-                                    Free Fire<input type="checkbox" id="games3" class="checkboxsel" name="games" value="Free Fire">
-                                </div>
+                                    {{# if pubg}}
+                                            Pubg<input type="checkbox" id="games1" class="checkboxsel" name="games" value="Pubg" checked>
+                                            Call Of Duty<input type="checkbox" id="games2" class="checkboxsel"  name="games" value="Call Of Duty">
+                                            Free Fire<input type="checkbox" id="games3" class="checkboxsel" name="games" value="Free Fire">
+
+                                        {{else if cfs}}
+                                            Pubg<input type="checkbox" id="games1" class="checkboxsel" name="games" value="Pubg" >
+                                            Call Of Duty<input type="checkbox" id="games2" class="checkboxsel"  name="games" value="Call Of Duty"checked>
+                                            Free Fire<input type="checkbox" id="games3" class="checkboxsel" name="games" value="Free Fire">
+                                        {{else if ff}}
+                                            Pubg<input type="checkbox" id="games1" class="checkboxsel" name="games" value="Pubg" >
+                                            Call Of Duty<input type="checkbox" id="games2" class="checkboxsel"  name="games" value="Call Of Duty"checked>
+                                            Free Fire<input type="checkbox" id="games3" class="checkboxsel" name="games" value="Free Fire">
+                                        {{else}}
+                                            Pubg<input type="checkbox" id="games1" class="checkboxsel" name="games" value="Pubg" >
+                                            Call Of Duty<input type="checkbox" id="games2" class="checkboxsel"  name="games" value="Call Of Duty">
+                                            Free Fire<input type="checkbox" id="games3" class="checkboxsel" name="games" value="Free Fire">
+                                    {{/if}}
+
+                                    </div>
+
                             </div>
                         </div>
                     </div>

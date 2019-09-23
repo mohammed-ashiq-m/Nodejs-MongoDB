@@ -1,11 +1,7 @@
 
 
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="main.js"></script>
+
+
     <!------ Include the above in your HEAD tag ---------->
 
     <!DOCTYPE html>
@@ -44,33 +40,38 @@
         </style>
     </head>
     <body>
-    <h5 style="text-align: center">The table only shows the details of customer who are indians </h5>
+
 <div class="container">
 
     <table>
         <tr>
-            <th >ID</th>
+
             <th >Firstname</th>
             <th >Lastname</th>
             <th >Gnder</th>
             <th >Country</th>
             <th >username</th>
             <th >Email</th>
+            <th>Games</th>
+            <th >Modify</th>
         </tr>
         {{#each data}}
         <tr>
-            <td>{{_id}}</td>
+
             <td>{{firstname}}</td>
             <td>{{lastname}}</td>
             <td>{{gender}}</td>
             <td>{{Select1}}</td>
             <td>{{username}}</td>
             <td>{{email}}</td>
+            <td>{{games}}</td>
             <td>
                 <form action="/update">
-                    <input type="text" name="id" value="{{_id}}" style="display: none">
+                    <input type="text" name="id" value="{{_id}}" style="display: none" >
                     <input type="submit" value="Edit">
-                </form></button>
+                </form>
+            <td><td><a href="#"  class="editEvent" data-id="{{this._id }}">Delete</a></td></td>
+            </td>
 
         </tr>
 {{/each}}
@@ -86,4 +87,4 @@
 
 
 
-    <input type="text" name='name0'  class="form-control" value="{{_id}}" style="background-color: inherit">
+

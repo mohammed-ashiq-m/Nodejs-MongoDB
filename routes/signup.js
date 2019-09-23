@@ -9,6 +9,7 @@ let dbconfig=require('../dbconfig/db-config');
         });
 
         router.post('/', function (req, res) {
+            console.log('-------------------->>' , req)
             let firstname = req.body.firstname;
             let lastname = req.body.lastname;
             let gender = req.body.gender;
@@ -17,11 +18,12 @@ let dbconfig=require('../dbconfig/db-config');
             let email = req.body.email;
             let mob = req.body.mobnum;
             let password = req.body.Password;
+            let game=req.body.games;
 
 
             console.log(firstname)
 
-            dbconfig.get().collection('signUpForm').insertOne({firstname:firstname,lastname:lastname,username:username,gender:gender,Select1:country,email:email,mobnum:mob,password:password},function (err,result) {
+            dbconfig.get().collection('signUpForm').insertOne({firstname:firstname,lastname:lastname,username:username,gender:gender,Select1:country,email:email,mobnum:mob,password:password,games:game},function (err,result) {
                 if (err) {
                     console.log('error' + err)
                 }else {
